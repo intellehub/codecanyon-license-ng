@@ -1,0 +1,38 @@
+{
+  "name": "shah-newaz/codecanyon-license",
+  "description": "CodeCanyon License Checker for Laravel Apps",
+  "keywords": ["laravel", "codecanyon", "license"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shahnewaz Rifat",
+      "email": "the.tintin.boss@gmail.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^6.0",
+    "php": "^7.2",
+    "vlucas/phpdotenv": "^3.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload": {
+    "psr-4": {
+        "Shahnewaz\\CodeCanyonLicensor\\": "src/"
+    },
+    "files": [
+        "src/helpers/general.php"
+    ]
+  },
+	"extra": {
+    "laravel": {
+      "providers": [
+          "Shahnewaz\\CodeCanyonLicensor\\Providers\\LicenseServiceProvider"
+      ],
+      "aliases": {
+        "Licensor": "Shahnewaz\\CodeCanyonLicensor\\Facades\\Licensor"
+      }
+    }
+	}
+}
